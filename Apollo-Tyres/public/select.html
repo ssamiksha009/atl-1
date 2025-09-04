@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Select - Apollo Tyres R&D</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/select.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo-container">
+            <img src="/images/Apollo-Tyres-Logo.png" alt="Apollo Tyres Logo" class="logo"
+                onclick="window.location.href='/index.html'" style="cursor: pointer;">
+        </div>
+        <h1 class="header-title">Tyre Virtualization Tool</h1>
+        <button id="logoutBtn" class="logout-button">Logout</button>
+    </header>
+
+    <main>
+        <div id="protocol-title" class="protocol-title"></div>
+        <div id="data-container">
+            <!-- Add FTire table -->
+            <table id="ftireTable" class="data-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>S.No</th>
+                        <th>Test</th>
+                        <th>Load (N)</th>
+                        <th>IP (Kpa)</th>
+                        <th>Speed (kmph)</th>
+                        <th>Longitudinal Slip (%)</th>
+                        <th>Slip Angle (deg)</th>
+                        <th>Inclination Angle (deg)</th>
+                        <th>Cleat Orientation (deg)</th>
+                        <th>Status</th>
+                        <th>Run</th>
+                        <th>Tydex</th>
+                    </tr>
+                </thead>
+                <tbody id="ftireTableBody"></tbody>
+            </table>
+
+            <!-- Add CDTire table -->
+            <table id="cdtireTable" class="data-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>No of Tests</th>
+                        <th>Test Name</th>
+                        <th>Inflation Pressure [bar]</th>
+                        <th>Velocity [km/h]</th>
+                        <th>Preload [N]</th>
+                        <th>Camber [Deg]</th>
+                        <th>Slip Angle [deg]</th>
+                        <th>Displacement [mm]</th>
+                        <th>Slip range [%]</th>
+                        <th>Cleat</th>
+                        <th>Road Surface</th>
+                        <th>Status</th>
+                        <th>Run</th>
+                        <th>Tydex</th>
+                    </tr>
+                </thead>
+                <tbody id="cdtireTableBody"></tbody>
+            </table>
+
+            <!-- For MF 6.2 Data -->
+            <table id="mf62Table" class="data-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Number of Tests</th>
+                        <th>Tests</th>
+                        <th>Inflation Pressure [PSI]</th>
+                        <th>Loads[Kg]</th>
+                        <th>Inclination Angle[°]</th>
+                        <th>Slip Angle[°]</th>
+                        <th>Slip Ratio [%]</th>
+                        <th>Test Velocity [Kmph]</th>
+                        <th>Status</th>
+                        <th>Run</th>
+                        <th>Tydex</th>
+                    </tr>
+                </thead>
+                <tbody id="mf62TableBody"></tbody>
+            </table>
+
+            <!-- For MF 5.2 Data -->
+            <table id="mf52Table" class="data-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>Number Of Tests</th>
+                        <th>Tests</th>
+                        <th>Inflation Pressure [PSI]</th>
+                        <th>Loads[Kg]</th>
+                        <th>Inclination Angle[°]</th>
+                        <th>Slip Angle[°]</th>
+                        <th>Slip Ratio [%]</th>
+                        <th>Test Velocity [Kmph]</th>
+                        <th>Status</th>
+                        <th>Run</th>
+                        <th>Tydex</th>
+                    </tr>
+                </thead>
+                <tbody id="mf52TableBody"></tbody>
+            </table> <!-- Add Custom table -->
+            <table id="customTable" class="data-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>No of Tests</th>
+                        <th>Tests</th>
+                        <th>Inflation Pressure [PSI]</th>
+                        <th>Loads [Kg]</th>
+                        <th>Inclination Angle [°]</th>
+                        <th>Slip Angle [°]</th>
+                        <th>Slip Ratio [%]</th>
+                        <th>Test Velocity [Kmph]</th>
+                        <th>Cleat Orientation [°]</th>
+                        <th>Displacement [mm]</th>
+                        <th>Status</th>
+                        <th>Run</th>
+                        <th>Tydex</th>
+                    </tr>
+                </thead>
+                <tbody id="customTableBody"></tbody>
+            </table>
+        </div>
+    </main>
+
+    <footer>
+        <button id="completeProjectBtn" class="submit-button">Complete Project</button>
+        <button id="markInProgressBtn" class="submit-button" style="margin-left:12px;background:#ffc107;color:#000;">
+            Mark project as In Progress
+        </button>
+    </footer>
+
+    <script src="/js/select.js"></script>
+</body>
+
+</html>
